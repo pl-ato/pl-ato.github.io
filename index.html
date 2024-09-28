@@ -2,12 +2,524 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Title</title>
 
-  <title>PLATO</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"> <!-- arXiv and google icon -->
+  <link rel="stylesheet" type="text/css" href="static/css/main.css">
+
+  <script src="https://kit.fontawesome.com/edbfd41333.js" crossorigin="anonymous"></script> <!-- fontawesome icons -->
+  <script src="static/js/main.js"></script>
+
+  <!-- 3. Carousel for visualizing a list of results: https://github.com/Wikiki/bulma-carousel -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/carousel.css">
+  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js" type="module"></script>
+  <script src="static/js/carousel.js" type="module"></script>
 </head>
+
 <body>
-  <h1>PLATO</h1>
+  <section class="section">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Mastering Scene Rearrangement with Expert-assisted Curriculum Learning and Adaptive Trade-Off Tree-Search</h2>
+      <p class="has-text-danger publisher">IROS 2024</p>
+
+      <div class="is-size-5">
+        <span class="authors">
+          <a href="https://silvester.wang/" target="_blank">Zan Wang</a><sup>1</sup>,</span>
+        <span class="authors">
+          <a href="https://hanqingwangai.github.io/" target="_blank">Hanqing Wang</a><sup>1</sup>,</span>
+        <span class="authors">
+          <a href="https://liangwei-bit.github.io/web/" target="_blank">Wei Liang</a><sup>1</sup>,</span>
+      </div>
+
+      <div class="is-size-6">
+        <span class="authors">
+          <sup>1</sup>Beijing Institute of Technology
+        </span>
+      </div>
+
+      <div class="links">
+        <span class="link">
+          <a href="static/pdfs/paper.pdf" target="_blank" class="external-link button is-normal is-rounded is-outlined is-danger">
+            <span class="icon">
+              <i class="fas fa-file-pdf"></i>
+            </span>
+            <span>Paper</span>
+          </a>
+        </span>
+
+        <span class="link">
+          <a href="#" target="_blank" class="external-link button is-normal is-rounded is-outlined is-dark">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>Code</span>
+          </a>
+        </span>
+
+        <span class="link"></span>
+          <a href="#" target="_blank" class="external-link button is-normal is-rounded is-outlined is-primary">
+            <span class="icon">
+              <i class="fa-solid fa-download"></i>
+            </span>
+            <span>Dataset</span>
+          </a>
+        </span>
+      </div>
+
+      <!-- <div class="columns is-centered">
+        <div class="column is-10">
+          <video autoplay controls muted loop height="100%">
+            <source src="static/videos/m1-mesh.mp4" type="video/mp4">
+          </video>
+          <h6 class="subtitle is-6">
+            <strong>TL;DR</strong> Lorem ipsum dolor sit amet. Vel molestiae deleniti qui cumque nisi ex libero perspiciatis est perspiciatis enim aut nemo placeat qui reprehenderit vitae cum blanditiis fuga.
+          </h6>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <section class="section custom-section">
+    <div class="container is-max-desktop has-text-centered">
+      <h3 class="title is-3">Abstract</h3>
+
+      <div class="has-text-justified">
+        <p>
+Scene Rearrangement Planning (SRP) has recently emerged as a crucial interior scene task; however, current approaches still face two primary issues. First, prior works define the action space of SRP using handcrafted coarse-grained actions, which are inflexible for scene arrangement transition and impractical for real-world deployment. Secondly, the scarcity of realistic indoor scene rearrangement data hinders popular data-hungry learning approaches and quantitative evaluation. To tackle these issues, we propose a fine-grained action space definition and curate a large-scale scene rearrangement dataset to facilitate the training of learning approaches and comprehensive benchmarking. Building upon this dataset, we introduce a novel framework, PLATO, designed for efficient agent training and inference. Our approach features an exPert-assisted curriculum Learning (PL) paradigm that possesses a Behavior Cloning (BC) and an offline Reinforcement Learning (RL) curriculum for agent training, along with an advanced tree-search-based planner enhanced by an Adaptive Trade-Off (ATO) strategy to improve expert agent performance further. We demonstrate the superior performance of our method over baseline agents through extensive experiments and provide a detailed analysis to elucidate its rationale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section custom-section">
+    <div class="container is-max-desktop has-text-centered">
+      <h3 class="title is-3">Scene Rearrangement Planning</h3>
+
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <video autoplay controls muted loop height="100%">
+            <source src="static/videos/srp.mp4" type="video/mp4">
+          </video>
+          <h6 class="subtitle is-6">
+            <strong>SRP aims to generate a feasible movement plan to transit from an initial scene layout to a target scene layout by moving furniture.</strong>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section custom-section">
+    <div class="container is-max-desktop has-text-centered">
+      <h3 class="title is-3">Success Cases</h3>
+
+      <div class="carousel carousel-items">
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/0/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/0/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/0/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/1/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/1/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/1/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/2/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/2/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/2/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/3/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/3/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/3/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/4/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/4/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/4/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/5/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/5/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/5/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/6/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/6/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/6/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/7/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/7/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/7/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/8/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/8/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/8/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/9/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/9/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/9/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="item">
+          <video muted autoplay="autoplay" loop="loop" height="100%">
+            <source src="static/videos/m2-mesh.mp4" type="video/mp4">
+          </video>
+        </div> -->
+      </div>
+  </section>
+
+  <section class="section custom-section">
+    <div class="container is-max-desktop has-text-centered">
+      <h3 class="title is-3">Failure Cases</h3>
+
+      <div class="carousel carousel-items">
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/fail1/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/fail1/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/fail1/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/fail2/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/fail2/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/1/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/fail3/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/fail3/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/fail3/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/fail4/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/fail4/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/fail4/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="columns">
+            <div class="column is-4">
+              <div class="initial">
+                <p>Initial layout</p>
+                <img src="static/results/fail5/initial.png" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="sequence">
+                <p>Action Sequence</p>
+                <img src="static/results/fail5/result.gif" class="image">
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="target">
+                <p class="res-title">Target layout</p>
+                <img src="static/results/fail5/target.png" class="image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="section custom-section"></section>
+    <div class="container is-max-desktop has-text-centered">
+      <h3 class="title is-3">Dataset</h3>
+
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <img src="static/images/rooms.jpg" class="image">
+          <h6 class="subtitle is-6" style="padding-top: 0.5em;">
+            <strong>We curate a new large-scale dataset containing 13k layout pairs for benchmarking SRP.</strong>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section custom-section">
+    <div class="container is-max-desktop">
+      <h3 class="title is-3 has-text-centered">Citation</h3>
+
+      <div class="bibtex">
+        <pre><code>@inproceedings{wang2024mastering,
+  title={Mastering Scene Rearrangement with Expert-assisted Curriculum Learning and Adaptive Trade-Off Tree-Search},
+  author={Wang, Zan and Wang, Hanqing and Liang, Wei},
+  booktitle={International Conference on Intelligent Robots and Systems (IROS)},
+  year={2024}
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container is-max-desktop has-text-centered">
+      <span>
+      This website is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      <br>
+      The open-source code is available at <a href="https://github.com/silverster98/project-page-template">github</a>.
+      </span>
+    </div>
+  </footer>
 </body>
+
 </html>

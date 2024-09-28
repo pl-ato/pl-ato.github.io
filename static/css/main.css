@@ -1,0 +1,84 @@
+html body {
+  /* font-family: 'Noto Sans', sans-serif; */
+  background-color: #fafafa;
+}
+
+/** header **/
+.publisher {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+.authors {
+  display: inline-block;
+}
+
+.authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+
+.authors a:hover {
+  text-decoration: underline;
+}
+
+.links {
+  margin: 1em 0;
+}
+
+.links span.link {
+  margin: 0 0.5em;
+}
+
+/** main **/
+.custom-section {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+a {
+  color: #3273dc;
+}
+
+a:hover {
+  color: #000;
+}
+
+.initial {
+  padding: 0em 1.5em;
+}
+
+.initial p {
+  font-size: 1.2em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+}
+
+.sequence p {
+  font-size: 1.2em;
+  padding-bottom: 0.5em;
+}
+
+.target {
+  padding: 0em 1.5em;
+}
+
+.target p {
+  font-size: 1.2em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+}
+
+/** foot **/
+.bibtex pre code {
+  white-space: pre-wrap;
+}
+
+.footer {
+  padding-bottom: 3em;
+}
+
+.footer span {
+  font-size: 0.9em;
+  color: #000;
+}
